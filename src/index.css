@@ -18,8 +18,8 @@
 }
 
 @theme{
-    --background-image-banner : url('./src/assets/homepage/banner.jpg');
-    --background-image-shop : url('./src/assets/homepage/shopnow.jpg')
+    --background-image-banner : url('../src/assets/homepage/banner.jpg');
+    --background-image-shop : url('../src/assets/homepage/shopnow.jpg')
 }
 
 @theme{
