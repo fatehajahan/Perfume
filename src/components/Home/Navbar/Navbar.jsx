@@ -12,10 +12,10 @@ const Navbar = ({ setCartOpen }) => {
   const toggleMenu = (item) => {
     if (item === "profile") {
       setProfile((item) => !item);
-      setDropdown(false); 
+      setDropdown(false);
     } else if (item === "dropdown") {
       setDropdown((item) => !item);
-      setProfile(false); 
+      setProfile(false);
     }
   };
 
@@ -23,18 +23,27 @@ const Navbar = ({ setCartOpen }) => {
     <div className='py-[20px] fixed bg-white top-0 left-0 w-full z-50'>
       <div className="container">
         <div className='flex justify-between items-center'>
-          
+
           <IoIosMenu onClick={() => toggleMenu("dropdown")} className='text-black text-[30px] md:hidden block cursor-pointer ml-[10px]' />
 
-          
+          <Link to="/">
+            <div className="middleLogo">
+              <img src={logo} alt="" className='cursor-pointer w-[85px] md:hidden block ' onClick={() => {
+              setCartOpen(false);
+              setDropdown(false);
+              setProfile(false);
+            }}/>
+            </div>
+          </Link>
+
           <div className='flex items-center text-[25px] gap-x-[20px] cursor-pointer md:hidden mr-[10px]'>
             <FaCartArrowDown className='hover:text-[#6a6a6a] transition duration-300' onClick={() => {
               setCartOpen(true);
-              setDropdown(false); 
-              setProfile(false);  
+              setDropdown(false);
+              setProfile(false);
             }} />
             <FaCircleUser className='hover:text-[#6a6a6a] transition duration-300' onClick={() => toggleMenu("profile")} />
-            
+
             {profile && (
               <div className='absolute right-0 md:right-[250px] top-[90px] z-50'>
                 <div className='bg-white flex flex-col gap-y-[30px] py-[30px] px-[20px] rounded-lg shadow-lg'>
@@ -46,13 +55,13 @@ const Navbar = ({ setCartOpen }) => {
           </div>
         </div>
 
-        
+
         <div className={`transition duration-300 ${dropdown ? 'translate-x-0' : "md:flex justify-between items-center hidden"}`}>
           <div className="leftNavitems md:flex items-center gap-x-[20px] font-urbanist text-[13px] cursor-pointer">
-            <p className='md:pt-0 pt-[11px] md:px-0 px-[15px]' onClick={()=>setDropdown(false)}>BUY PERFUMES</p>
-            <p className='md:pt-0 pt-[11px] md:px-0 px-[15px]' onClick={()=>setDropdown(false)}>EXCLUSIVE</p>
-            <p className='md:pt-0 pt-[11px] md:px-0 px-[15px]' onClick={()=>setDropdown(false)}>WOMEN</p>
-            <p className='md:pt-0 pt-[11px] md:px-0 px-[15px]' onClick={()=>setDropdown(false)}>MEN</p>
+            <p className='md:pt-0 pt-[11px] md:px-0 px-[15px]' onClick={() => setDropdown(false)}>BUY PERFUMES</p>
+            <p className='md:pt-0 pt-[11px] md:px-0 px-[15px]' onClick={() => setDropdown(false)}>EXCLUSIVE</p>
+            <p className='md:pt-0 pt-[11px] md:px-0 px-[15px]' onClick={() => setDropdown(false)}>WOMEN</p>
+            <p className='md:pt-0 pt-[11px] md:px-0 px-[15px]' onClick={() => setDropdown(false)}>MEN</p>
           </div>
 
           {/* Logo */}
@@ -64,18 +73,18 @@ const Navbar = ({ setCartOpen }) => {
 
           {/* Desktop Profile & Cart */}
           <div className="rightnavitems md:flex items-center gap-x-[20px] font-urbanist text-[13px] cursor-pointer">
-            <p className='md:px-0 px-[15px] md:pt-0 pt-[11px]' onClick={()=>setDropdown(false)}>ABOUT</p>
+            <p className='md:px-0 px-[15px] md:pt-0 pt-[11px]' onClick={() => setDropdown(false)}>ABOUT</p>
             <div className='md:pt-0 pt-[11px]'>
-              <Link to="/contact" className='md:px-0 px-[15px] ' onClick={()=>setDropdown(false)}>CONTACT</Link>
+              <Link to="/contact" className='md:px-0 px-[15px] ' onClick={() => setDropdown(false)}>CONTACT</Link>
             </div>
             <div className='md:flex items-center text-[25px] gap-x-[20px] cursor-pointer hidden relative'>
               <FaCartArrowDown className='hover:text-[#6a6a6a] transition duration-300' onClick={() => {
                 setCartOpen(true);
-                setDropdown(false); 
-                setProfile(false);  
+                setDropdown(false);
+                setProfile(false);
               }} />
               <FaCircleUser className='hover:text-[#6a6a6a] transition duration-300' onClick={() => toggleMenu("profile")} />
-              
+
               {profile && (
                 <div className='absolute md:right-[10px] md:top-[50px] z-50'>
                   <div className='bg-white flex flex-col gap-y-[30px] py-[30px] px-[20px] rounded-lg shadow-lg'>
