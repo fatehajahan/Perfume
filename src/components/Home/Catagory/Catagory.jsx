@@ -7,34 +7,34 @@ import catagory3 from '../../../assets/homepage/catagory3.jpg'
 
 const Catagory = () => {
     return (
-        <div className='pb-[100px]'>
+        <div className='py-[100px]'>
             <div className="container">
                 <div className="title text-center font-cormot">
                     <p className='text-[17px]'>New perfumes</p>
-                    <h2 className='font-cormot text-[55px]'>Shop by Category</h2>
+                    <h2 className='font-cormot md:text-[55px] text-[35px]'>Shop by Category</h2>
                     <div className='bg-black w-[45px] h-[1.5px] mx-auto mt-[20px]'></div>
                 </div>
 
-                <div className="catagories flex justify-between gap-x-[20px] mt-[40px]">
-                    <div className='w-1/3 relative'>
+                <div className="catagories md:flex justify-between gap-x-[20px] mt-[40px]">
+                    <div className='md:w-1/3 w-[370px] relative md:mt-0 mt-[40px] md:px-0 px-[20px]'>
                         <img src={catagory1} alt="" className='w-full' />
-                        <div className='bg-[#fff] opacity-[80%] hover:opacity-[100%] transition duration-300 py-[10px] w-[400px] absolute bottom-[30px] left-[10px] text-center cursor-pointer'>
+                        <div className='bg-[#ffffff] opacity-[80%] hover:opacity-[100%] transition duration-300 py-[10px] w-[310px] md:w-[400px] absolute bottom-[30px] md:left-[10px] left-[30px] text-center cursor-pointer'>
                             <p className='font-cormot text-[16px]  font-bold'>EXCLUSIVE</p>
                             <p className='text-[12px] font-urbanist'>6 Products</p>
                         </div>
                     </div>
 
-                    <div className='w-1/3 relative'>
+                    <div className='md:w-1/3 w-[370px] relative md:mt-0 mt-[40px] md:px-0 px-[20px]'>
                         <img src={catagory2} alt="" className='w-full' />
-                        <div className='bg-[#fff] opacity-[80%] hover:opacity-[100%] transition duration-300 py-[10px] w-[400px] absolute bottom-[30px] left-[10px] text-center cursor-pointer'>
+                        <div className='bg-[#fff] opacity-[80%] hover:opacity-[100%] transition duration-300 py-[10px] w-[310px] md:w-[400px] absolute bottom-[30px] md:left-[10px] left-[30px] text-center cursor-pointer'>
                             <p className='font-cormot text-[16px]  font-bold'>MEN</p>
                             <p className='text-[12px] font-urbanist'>6 Products</p>
                         </div>
                     </div>
 
-                    <div className='w-1/3 relative'>
+                    <div className='md:w-1/3 w-[370px] relative md:mt-0 mt-[40px] md:px-0 px-[20px]'>
                         <img src={catagory3} alt="" className='w-full' />
-                        <div className='bg-[#fff] opacity-[80%] hover:opacity-[100%] transition duration-300 py-[10px] w-[400px] absolute bottom-[30px] left-[10px] text-center cursor-pointer'>
+                        <div className='bg-[#fff] opacity-[80%] hover:opacity-[100%] transition duration-300 py-[10px] w-[310px] md:w-[400px] absolute bottom-[30px] md:left-[10px] left-[30px] text-center cursor-pointer'>
                             <p className='font-cormot text-[16px]  font-bold'>WOMEN</p>
                             <p className='text-[12px] font-urbanist'>6 Products</p>
                         </div>

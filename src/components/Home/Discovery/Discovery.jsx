@@ -10,8 +10,8 @@ const Discovery = () => {
                 <div className='md:flex justify-between gap-x-[20px]'>
                     <div className=''>
                         <div className='md:flex gap-x-[20px]'>
-                            <img src={discovery1} alt="" className='w-[300px] h-[260px] object-cover' />
-                            <img src={discovery2} alt="" className='w-[300px] h-[260px] object-cover' />
+                            <img src={discovery1} alt="" className='md:w-[300px] w-[317px] h-[260px] object-cover md:mx-0 mx-auto' />
+                            <img src={discovery2} alt="" className='md:w-[300px] w-[317px] h-[260px] object-cover md:mx-0 mx-auto' />
                         </div>
                         <div className="text-center mx-auto md:pt-[50px] md:py-0 py-[50px]">
                             <div className="w-12 h-0.5 bg-black mx-auto mb-4"></div>

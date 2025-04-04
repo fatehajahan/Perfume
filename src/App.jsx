@@ -29,7 +29,10 @@ const Layout = () => {
       {cartOpen && (
         <div
           className="fixed inset-0 bg-[#00000049]"
-          onClick={() => setCartOpen(false)}
+          onClick={() => {
+            setCartOpen(false)
+            setDropdown(false)
+          }}
         ></div>
       )}
     </>
