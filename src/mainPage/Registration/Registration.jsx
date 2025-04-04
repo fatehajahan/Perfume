@@ -4,18 +4,18 @@ import { Link } from 'react-router-dom'
 
 const Registration = () => {
     return (
-        <div className='flex items-center overflow-hidden h-screen bg-[linear-gradient(90deg,#AE8625,#F7EF8A,#D2AC47,#EDC967)]'>
-            <div className="w-[70%] flex flex-col items-center justify-center">
-                <div className='bg-white w-[60%] py-[70px] px-[40px] rounded-2xl'>
+        <div className='md:flex items-center overflow-hidden h-screen bg-[linear-gradient(90deg,#AE8625,#F7EF8A,#D2AC47,#EDC967)]'>
+            <div className="md:w-[70%] flex flex-col items-center justify-center md:my-0 my-[60px]">
+                <div className='bg-white md:w-[60%] py-[70px] px-[40px] rounded-2xl'>
                     <div className='text-center'>
-                        <p className='font-cormot text-[20px] font-bold'>Let's Start a New Journey..!</p>
-                        <p className='font-cormot text-[50px] font-bold text-[#c2155b]'>Sign Up</p>
+                        <p className='font-cormot md:text-[20px] text-[13px] font-bold'>Let's Start a New Journey..!</p>
+                        <p className='font-cormot md:text-[50px] text-[30px] font-bold text-[#c2155b]'>Sign Up</p>
                     </div>
 
                     <div className='flex flex-col gap-y-[30px] mt-[20px]'>
-                        <input type="text" className='border border-[#f0c5d9] bg-gray-200 py-[6px] px-[15px] w-full placeholder:text-[14px]' placeholder='Give Your Email id' />
-                        <input type="text" className='border border-[#f0c5d9] bg-gray-200 py-[6px] px-[15px] w-full placeholder:text-[14px]' placeholder='Give Your Name' />
-                        <input type="text" className='border border-[#f0c5d9] bg-gray-200 py-[6px] px-[15px] w-full placeholder:text-[14px]' placeholder='Create a password' />
+                        <input type="text" className='border border-[#f0c5d9] bg-gray-200 py-[6px] px-[15px] w-full md:placeholder:text-[14px] placeholder:text-[12.5px]' placeholder='Give Your Email id' />
+                        <input type="text" className='border border-[#f0c5d9] bg-gray-200 py-[6px] px-[15px] w-full md:placeholder:text-[14px] placeholder:text-[12.5px]' placeholder='Give Your Name' />
+                        <input type="text" className='border border-[#f0c5d9] bg-gray-200 py-[6px] px-[15px] w-full md:placeholder:text-[14px] placeholder:text-[12.5px]' placeholder='Create a password' />
                     </div>
 
                     <div className="submitBtn mt-[30px] text-center">
@@ -29,8 +29,8 @@ const Registration = () => {
                     </div>
                 </div>
             </div>
-            <div className="w-[40%]">
-                <img src={reg} alt="" />
+            <div className="md:w-[40%]">
+                <img src={reg} alt=""  className='md:block hidden'/>
             </div>
         </div>
     )

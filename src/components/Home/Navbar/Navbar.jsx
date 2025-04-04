@@ -49,10 +49,10 @@ const Navbar = ({ setCartOpen }) => {
         
         <div className={`transition duration-300 ${dropdown ? 'translate-x-0' : "md:flex justify-between items-center hidden"}`}>
           <div className="leftNavitems md:flex items-center gap-x-[20px] font-urbanist text-[13px] cursor-pointer">
-            <p className='md:pt-0 pt-[11px] md:px-0 px-[15px]'>BUY PERFUMES</p>
-            <p className='md:pt-0 pt-[11px] md:px-0 px-[15px]'>EXCLUSIVE</p>
-            <p className='md:pt-0 pt-[11px] md:px-0 px-[15px]'>WOMEN</p>
-            <p className='md:pt-0 pt-[11px] md:px-0 px-[15px]'>MEN</p>
+            <p className='md:pt-0 pt-[11px] md:px-0 px-[15px]' onClick={()=>setDropdown(false)}>BUY PERFUMES</p>
+            <p className='md:pt-0 pt-[11px] md:px-0 px-[15px]' onClick={()=>setDropdown(false)}>EXCLUSIVE</p>
+            <p className='md:pt-0 pt-[11px] md:px-0 px-[15px]' onClick={()=>setDropdown(false)}>WOMEN</p>
+            <p className='md:pt-0 pt-[11px] md:px-0 px-[15px]' onClick={()=>setDropdown(false)}>MEN</p>
           </div>
 
           {/* Logo */}
@@ -64,9 +64,9 @@ const Navbar = ({ setCartOpen }) => {
 
           {/* Desktop Profile & Cart */}
           <div className="rightnavitems md:flex items-center gap-x-[20px] font-urbanist text-[13px] cursor-pointer">
-            <p className='md:px-0 px-[15px] md:pt-0 pt-[11px]'>ABOUT</p>
+            <p className='md:px-0 px-[15px] md:pt-0 pt-[11px]' onClick={()=>setDropdown(false)}>ABOUT</p>
             <div className='md:pt-0 pt-[11px]'>
-              <Link to="/contact" className='md:px-0 px-[15px] '>CONTACT</Link>
+              <Link to="/contact" className='md:px-0 px-[15px] ' onClick={()=>setDropdown(false)}>CONTACT</Link>
             </div>
             <div className='md:flex items-center text-[25px] gap-x-[20px] cursor-pointer hidden relative'>
               <FaCartArrowDown className='hover:text-[#6a6a6a] transition duration-300' onClick={() => {

@@ -4,7 +4,7 @@ import { FaSquarePinterest } from 'react-icons/fa6'
 
 const Contact = () => {
     return (
-        <div className='pt-[100px]'>
+        <div className='md:py-[100px] py-[60px]'>
             <div className="font-[Poppins] bg-white text-black">
                 <div className="w-full mx-auto py-16 text-center">
                     <p className="uppercase text-sm tracking-widest">get in touch</p>
