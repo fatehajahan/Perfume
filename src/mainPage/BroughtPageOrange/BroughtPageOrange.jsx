@@ -23,9 +23,9 @@ const BroughtPage = () => {
 
   return (
     <div>
-      <div className="md:px-0 px-[20px]">
+      <div className="">
         <div className="container">
-          <div className="md:py-[150px] py-[20px] md:flex items-center">
+          <div className="md:py-[150px] py-[30px] md:flex items-center">
             <div className="px-4 md:w-1/2">
               <div className="flex gap-6 items-center">
                 {/* Thumbnail Images */}
@@ -34,7 +34,7 @@ const BroughtPage = () => {
                     <img
                       key={index}
                       src={img}
-                      className={`md:w-[100px] md:h-[100px] w-[110px] object-cover border rounded-md cursor-pointer ${selectedImage == img ? "border-black" : "border-gray-300"
+                      className={`md:w-[100px] md:h-[100px] w-[140px] object-cover border rounded-md cursor-pointer ${selectedImage == img ? "border-black" : "border-gray-300"
                         }`}
                       onClick={() => setSelectedImage(img)}
                     />
@@ -52,9 +52,9 @@ const BroughtPage = () => {
               </div>
             </div>
 
-            <div className="text-left md:w-1/2 flex flex-col gap-y-[15px]">
+            <div className="text-left md:w-1/2 flex flex-col gap-y-[15px] md:px-0 px-[20px]">
               <div className="flex items-center justify-between">
-                <p className="font-cormot text-[30px]">Cool Blue Perfume</p>
+                <p className="font-cormot md:text-[30px] text-[25px]">Cool Blue Perfume</p>
                 <div className="flex gap-x-[20px] ">
                   <FaCircleArrowLeft className="text-[25px] cursor-pointer hover:text-[#878787] transition duration-300" />
                   <FaCircleArrowRight className="text-[25px] cursor-pointer hover:text-[#878787] transition duration-300" />
@@ -107,9 +107,11 @@ const BroughtPage = () => {
             </div>
           </div>
 
-          <ReviewForm />
+          <div className='md:px-0 px-[20px]'>
+            <ReviewForm />
+          </div>
 
-          <div>
+          <div className='md:px-0 px-[20px]'>
             <h2 className="font-cormot text-[35px] py-[20px]">Related Products</h2>
             <div className="md:flex justify-between gap-x-[30px] pb-[80px]">
               <div className="md:my-0 my-[50px]">
