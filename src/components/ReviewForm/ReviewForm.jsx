@@ -7,7 +7,6 @@ const ReviewForm = () => {
     const [active, setActive] = useState("description")
     return (
         <div className="mb-[80px]">
-            {/* <div className="bg-[#cfcfcf] w-full h-[3px]"></div> */}
             <div className="flex border-t items-center gap-x-[18px] cursor-pointer pb-[50px] font-urbanist text-[20px]">
                 <p className={`p-2 w-1/2 ${active === "description" ? "border-b-2 border-blue-500 font-bold" : ""}`}
                     onClick={() => setActive("description")}>Description</p>
@@ -15,11 +14,11 @@ const ReviewForm = () => {
                     onClick={() => setActive("review")}>Review</p>
             </div>
 
-            <div className="mt-4">
+            <div className="md:mt-4">
                 {active == "description" &&
                     <div>
                         <div className="font-cormot text-[35px]">Product description</div>
-                        <p className="font-cormot text-[17px] pt-[15px]">
+                        <p className="font-cormot text-[17px] pt-[15px] text-justify">
                             Since it’s creation lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
                             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>

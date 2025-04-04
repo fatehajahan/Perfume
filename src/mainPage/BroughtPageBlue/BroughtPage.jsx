@@ -20,10 +20,10 @@ const BroughtPage = () => {
     const [selectedImage, setSelectedImage] = useState(images[0]);
 
     return (
-        <div>
+        <div className="md:px-0 px-[20px]">
             <div className="container">
-                <div className="py-[150px] flex items-center">
-                    <div className=" px-4 w-1/2">
+                <div className="md:py-[150px] py-[20px] md:flex items-center">
+                    <div className="px-4 md:w-1/2">
                         <div className="flex gap-6 items-center">
                             {/* Thumbnail Images */}
                             <div className="flex flex-col gap-4">
@@ -31,8 +31,7 @@ const BroughtPage = () => {
                                     <img
                                         key={index}
                                         src={img}
-                                        // alt={`Product ${index + 1}`}
-                                        className={`w-[100px] h-[100px] object-cover border rounded-md cursor-pointer ${selectedImage === img ? "border-black" : "border-gray-300"
+                                        className={`md:w-[100px] md:h-[100px] w-[110px] object-cover border rounded-md cursor-pointer ${selectedImage == img ? "border-black" : "border-gray-300"
                                             }`}
                                         onClick={() => setSelectedImage(img)}
                                     />
@@ -50,7 +49,7 @@ const BroughtPage = () => {
                         </div>
                     </div>
 
-                    <div className="text-left w-1/2 flex flex-col gap-y-[15px]">
+                    <div className="text-left md:w-1/2 flex flex-col gap-y-[15px]">
                         <div className="flex items-center justify-between">
                             <p className="font-cormot text-[30px]">Cool Blue Perfume</p>
                             <div className="flex gap-x-[20px] ">
@@ -64,15 +63,21 @@ const BroughtPage = () => {
                             <p className="font-urbanist text-[15px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt ab fuga ea at quibusdam, temporibus soluta ipsum omnis eaque distinctio!</p>
                         </div>
 
-                        <div className="flex text-[15px]">
-                            <p className="border px-[15px] cursor-pointer hover:bg-black hover:text-white transition duration-300">-</p>
-                            <p className="border px-[15px]">1</p>
-                            <p className="border px-[15px] cursor-pointer hover:bg-black hover:text-white transition duration-300">+</p>
+                        <div className="flex text-[15px] gap-x-[20px] items-center">
+                            <div className=" flex items-center">
+                                <p className="border px-[15px] cursor-pointer hover:bg-black hover:text-white transition duration-300">-</p>
+                                <p className="border px-[15px]">1</p>
+                                <p className="border px-[15px] cursor-pointer hover:bg-black hover:text-white transition duration-300">+</p>
+                            </div>
+
+                            <div className="w-[400px] bg-black text-white text-center py-[4px] cursor-pointer hover:bg-transparent hover:text-black font-bold transition duration-500">
+                                <p>Add to Cart</p>
+                            </div>
                         </div>
 
                         <div className="mx-auto mt-[15px] border w-full py-[20px] relative text-[#000]">
-                            <p className="absolute top-[-13px] left-[31%] px-[25px] font-urbanist bg-white">Guaranteed Safe Checkout</p>
-                            <div className="flex items-center justify-center gap-x-[35px] text-[55px]">
+                            <p className="absolute top-[-13px] md:left-[31%] left-[17%] px-[25px] font-urbanist bg-white">Guaranteed Safe Checkout</p>
+                            <div className="flex items-center justify-center gap-x-[35px] text-[55px] md:px-0 px-[20px]">
                                 <FaCcVisa />
                                 <FaCcMastercard />
                                 <SiAmericanexpress />
@@ -104,7 +109,7 @@ const BroughtPage = () => {
 
                 <div>
                     <h2 className="font-cormot text-[35px] py-[20px]">Related Products</h2>
-                    <div className="flex justify-between gap-x-[30px] pb-[80px]">
+                    <div className="md:flex justify-between gap-x-[30px] pb-[80px]">
                         <Link to="/broughtproduct" className="product1 cursor-pointer">
                             <img src={extraproduct1} alt="" className="" />
                             <div className='pt-[15px]'>
