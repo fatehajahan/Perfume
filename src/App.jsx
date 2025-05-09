@@ -16,6 +16,14 @@ import AddCart from "./mainPage/AddCart/AddCart";
 import ViewCart from "./mainPage/ViewCart/ViewCart";
 import Registration from "./mainPage/Registration/Registration";
 import Login from "./mainPage/Login/Login";
+import Sidebar from "./Admin/Sidebar";
+import Header from "./Admin/Header";
+import AdminDashboard from "./Admin/AdminDashboard/AdminDashboard";
+import CreateCategory from "./Admin/Categories/CreateCategory";
+import CategoryList from "./Admin/Categories/CategoryList";
+import CreateProduct from "./Admin/Products/CreateProduct";
+import CategoryUpdate from "./Admin/Categories/CategoryUpdate";
+import CreateSubCategory from "./Admin/SubCategory/CreateSubCategory";
 
 const Layout = () => {
   const [cartOpen, setCartOpen] = useState(false)
@@ -39,9 +47,25 @@ const Layout = () => {
   );
 };
 
+const LayoutForAdmin = () => {
+  return (
+    <div className="flex flex-col h-screen w-full">
+      <Header />
+
+      <div className="flex flex-1 overflow-hidden">
+        <Sidebar />
+        <div className="flex-1 overflow-y-auto p-4 bg-gray-50">
+          <Outlet />
+        </div>
+      </div>
+    </div>
+  );
+}
+
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route >
+    <Route>
+      {/* Public/User Layout */}
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
         <Route path="/bluePerfume" element={<BroughtPage />} />
@@ -49,8 +73,20 @@ const router = createBrowserRouter(
         <Route path="/contact" element={<Contact />} />
         <Route path="/mycart" element={<ViewCart />} />
       </Route>
+
+      {/* Public Routes outside layout */}
       <Route path="/registration" element={<Registration />} />
       <Route path="/login" element={<Login />} />
+
+      {/* Admin Layout */}
+      <Route element={<LayoutForAdmin />}>
+        <Route path="/adminPanel" element={<AdminDashboard />} />
+        <Route path="/createcategory" element={<CreateCategory />} />
+        <Route path="/categorylist" element={<CategoryList />} />
+        <Route path="/createproduct" element={<CreateProduct />} />
+        <Route path="/updatecategory/:id" element={<CategoryUpdate />} />
+        <Route path="/createsubcategory" element={<CreateSubCategory />} />
+      </Route>
     </Route>
   )
 );
